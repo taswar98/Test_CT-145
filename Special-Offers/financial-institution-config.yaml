@@ -1,0 +1,11 @@
+root:
+- financial_institution:
+  name: "Scotiabank"
+  accounts:
+  - account_category: 'Saving Accounts'
+    url: 'https://www.scotiabank.com/ca/en/personal/bank-accounts/savings-accounts/momentum-plus-savings-account.html?cid=ps_ce66dcc43815eae8ce94650882090096e87fa67e&gclid=CjwKCAjwi_b3BRAGEiwAemPNU4g9PqUl4fV2aIIYt8eoLxcZxylnkR2Z6M6IO1qqFkOaaEkjCvfuLBoCmiMQAvD_BwE&gclsrc=aw.ds'
+    elements : 
+      account_name: div[class='title bns--title'] > h1  
+      fee: div[class='col-md-6 col-lg-3'] > span 
+      details: div[class='col-md-6 col-lg-3'] > div
+      special_offer: div[class='cmp cmp-text'] > p
