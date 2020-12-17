@@ -53,7 +53,7 @@ for x in getList(special_offer_dict):
         # sheet.cell(row=rowNum, column=4).alignment = Alignment(horizontal='left', vertical='center')
         writtenPara = ""
         if not special_offer_dict[x]['accounts'][y]['fee']:
-            writtenPara = "$0"
+            writtenPara = "1. Monthly fee: $0"
         else:
             for index, fee in enumerate(special_offer_dict[x]['accounts'][y]['fee']):
                 writtenPara += str(index + 1) + ". " + fee + "\n"
@@ -93,7 +93,13 @@ for x in getList(special_offer_dict):
 
         writtenPara = ""
         for index, detail in enumerate(special_offer_dict[x]['accounts'][y]['details']):
-
+            if accountName == 'The MomentumPLUS Savings Account':
+                st = str(detail)
+                st1 = st.replace('account2.', 'account.')
+                st2 = st1.replace('required4.', 'required')
+                st3 = st2.replace('transfers6.', 'transfers')
+                st4 = st3.replace('grow8.', 'grow')
+                detail = st4
             det = str(detail)
             cleaned = det.replace('legal bug', '').rstrip(string.digits)
             writtenPara += str(index + 1) + ". " + cleaned + "\n"
